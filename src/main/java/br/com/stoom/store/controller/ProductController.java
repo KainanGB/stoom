@@ -19,6 +19,7 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<List<Product>> getAllProducts(@RequestParam(defaultValue = "true") boolean active) {
+
         System.out.println("called here");
         List<Product> products = productService.getAllProducts(active);
         if (!products.isEmpty())

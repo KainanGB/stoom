@@ -33,3 +33,30 @@ CREATE TABLE IF NOT EXISTS t_orders (
     amount FLOAT NOT NULL,
     FOREIGN KEY (product_id) REFERENCES t_products(product_id)
 );
+
+
+-- Inserindo dados na tabela t_categories
+INSERT INTO t_categories (category) VALUES
+('Electronics'),
+('Clothing'),
+('Home Appliances');
+
+-- Inserindo dados na tabela t_brands
+INSERT INTO t_brands (brand) VALUES
+('Sony'),
+('Nike'),
+('Samsung');
+
+-- Inserindo dados na tabela t_products
+INSERT INTO t_products (category_id, brand_id, name, price) VALUES
+(1, 1, 'Sony TV', 499.99),
+(1, 3, 'Samsung Phone', 299.99),
+(2, 2, 'Nike Shoes', 79.99),
+(3, 3, 'Samsung Refrigerator', 899.99);
+
+-- Inserindo dados na tabela t_orders
+INSERT INTO t_orders (product_id, quantity, amount) VALUES
+(1, 1, 499.99),
+(2, 2, 599.98),
+(3, 3, 239.97),
+(4, 1, 899.99);

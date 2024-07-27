@@ -8,6 +8,133 @@
 ### Dicas Adicionais:
 
 - **Certifique-se de que o Docker e Docker Compose estão em execução**: Antes de rodar o comando `docker-compose up --build`, certifique-se de que o Docker está em execução no seu sistema.
+- Baixe as coleções do Postman:
+- [Categories](https://raw.githubusercontent.com/KainanGB/stoom/master/Stoom%20-%20Categories.json)
+- [Products](https://raw.githubusercontent.com/KainanGB/stoom/master/Stoom%20-%20Products.json)
+- [Brands](https://raw.githubusercontent.com/KainanGB/stoom/master/Stoom%20-%20Brand.json)
+- [Orders](https://raw.githubusercontent.com/KainanGB/stoom/master/Stoom%20-%20Orders.json)
+
+### Implemented Endpoints:
+
+Brand Endpoints
+Get all brands:
+
+URL: /api/brands
+Method: GET
+Query Parameters:
+active (boolean): Filter by active status. Default is true.
+name (string): Filter by brand name.
+page (int): Page number for pagination.
+size (int): Page size for pagination. Default is 10.
+Get brand by ID:
+
+URL: /api/brands/{id}
+Method: GET
+Path Variable: id (Long): ID of the brand.
+Create a new brand:
+
+URL: /api/brands
+Method: POST
+Request Body: Brand object.
+Update a brand:
+
+URL: /api/brands/{id}
+Method: PUT
+Path Variable: id (Long): ID of the brand.
+Request Body: Brand object.
+Delete a brand:
+
+URL: /api/brands/{id}
+Method: DELETE
+Path Variable: id (Long): ID of the brand.
+Category Endpoints
+Get all categories:
+
+URL: /api/categories
+Method: GET
+Query Parameters:
+active (boolean): Filter by active status. Default is true.
+name (string): Filter by category name.
+page (int): Page number for pagination.
+size (int): Page size for pagination. Default is 10.
+Get category by ID:
+
+URL: /api/categories/{id}
+Method: GET
+Path Variable: id (Long): ID of the category.
+Create a new category:
+
+URL: /api/categories
+Method: POST
+Request Body: Category object.
+Update a category:
+
+URL: /api/categories/{id}
+Method: PUT
+Path Variable: id (Long): ID of the category.
+Request Body: Category object.
+Delete a category:
+
+URL: /api/categories/{id}
+Method: DELETE
+Path Variable: id (Long): ID of the category.
+Order Endpoints
+Get all orders:
+
+URL: /api/orders
+Method: GET
+Query Parameters:
+page (int): Page number for pagination.
+size (int): Page size for pagination. Default is 10.
+Get order by ID:
+
+URL: /api/orders/{id}
+Method: GET
+Path Variable: id (Long): ID of the order.
+Create a new order:
+
+URL: /api/orders
+Method: POST
+Request Body: Order object.
+Update an order:
+
+URL: /api/orders/{id}
+Method: PUT
+Path Variable: id (Long): ID of the order.
+Request Body: Order object.
+Delete an order:
+
+URL: /api/orders/{id}
+Method: DELETE
+Path Variable: id (Long): ID of the order.
+Product Endpoints
+Get all products:
+
+URL: /api/products
+Method: GET
+Query Parameters:
+active (boolean): Filter by active status. Default is true.
+Get product by ID:
+
+URL: /api/products/{id}
+Method: GET
+Path Variable: id (Long): ID of the product.
+Create a new product:
+
+URL: /api/products
+Method: POST
+Request Body: Product object.
+Update a product:
+
+URL: /api/products/{id}
+Method: PUT
+Path Variable: id (Long): ID of the product.
+Request Body: Product object.
+Delete a product:
+
+URL: /api/products/{id}
+Method: DELETE
+Path Variable: id (Long): ID of the product.
 
 ## Instruções do projeto:
 
