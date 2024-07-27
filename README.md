@@ -1,5 +1,15 @@
 **Seja bem-vindo candidato!**
 
+## Como iniciar esse projeto:
+
+1. faça clone o projeto.
+2. certifique-se de ter instalado o docker no seu computador.
+3. entre na pasta do projeto
+4. rode o comando: docker compose up
+5. vualá.
+
+## Instruções do projeto:
+
 Como um desenvolvedor Back-End na Stoom uma das maiores responsabilidades que você vai ter é desenvolver funcionalidades e corrigir bugs em sistemas de e-commerce de larga escala que utilizam Spring Boot. Com base nisso, precisamos de sua ajuda para construir a nossa loja Stoom, que deve conter as seguintes funcionalidades:
 
 1. Deve ser desenvolvida uma API de CRUD de produtos
