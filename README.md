@@ -2,11 +2,14 @@
 
 ## Como iniciar esse projeto:
 
-1. Faça clone do projeto.
-2. Certifique-se de ter instalado o docker no seu computador.
+1. Faça o clone deste repositório.
 3. Entre na pasta do projeto
-4. Rode o comando no seu terminal: docker compose up
+4. Rode o comando no seu terminal: docker compose up --build
 5. vualá.
+
+### Dicas Adicionais:
+
+- **Certifique-se de que o Docker e Docker Compose estão em execução**: Antes de rodar o comando `docker-compose up --build`, certifique-se de que o Docker está em execução no seu sistema.
 
 ## Instruções do projeto:
 
