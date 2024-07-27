@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "Stoom - Products",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/products?active=true&name=&page=0&size=10",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "products"],
+          "query": [
+            {
+              "key": "active",
+              "value": "true",
+              "description": "(Optional) Filter by active status"
+            },
+            {
+              "key": "name",
+              "value": "",
+              "description": "(Optional) Filter by name"
+            },
+            {
+              "key": "page",
+              "value": "0",
+              "description": "(Optional) Page number"
+            },
+            {
+              "key": "size",
+              "value": "10",
+              "description": "(Optional) Page size"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Product By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/products/:id",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "products", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"New Product\",\n    \"price\": 100.0,\n    \"active\": true,\n    \"category\": {\n        \"categoryId\": 1\n    },\n    \"brand\": {\n        \"brandId\": 1\n    }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/products",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "products"]
+        }
+      }
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Updated Product\",\n    \"price\": 150.0,\n    \"active\": true,\n    \"category\": {\n        \"categoryId\": 1\n    },\n    \"brand\": {\n        \"brandId\": 1\n    }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/products/:id",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "products", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/products/:id",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "products", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

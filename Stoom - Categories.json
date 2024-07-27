@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "Stoom - Categories",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/categories?active=true&name=&page=0&size=10",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "categories"],
+          "query": [
+            {
+              "key": "active",
+              "value": "true",
+              "description": "(Optional) Filter by active status"
+            },
+            {
+              "key": "name",
+              "value": "",
+              "description": "(Optional) Filter by name"
+            },
+            {
+              "key": "page",
+              "value": "0",
+              "description": "(Optional) Page number"
+            },
+            {
+              "key": "size",
+              "value": "10",
+              "description": "(Optional) Page size"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Category By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/categories/:id",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "categories", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Category",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"category\": \"New Category\",\n    \"active\": true\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/categories",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "categories"]
+        }
+      }
+    },
+    {
+      "name": "Update Category",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"category\": \"Updated Category\",\n    \"active\": true\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/categories/:id",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "categories", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Category",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/categories/:id",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "categories", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
