@@ -2,10 +2,10 @@
 
 ## Como iniciar esse projeto:
 
-1. faça clone o projeto.
-2. certifique-se de ter instalado o docker no seu computador.
-3. entre na pasta do projeto
-4. rode o comando: docker compose up
+1. Faça clone do projeto.
+2. Certifique-se de ter instalado o docker no seu computador.
+3. Entre na pasta do projeto
+4. Rode o comando no seu terminal: docker compose up
 5. vualá.
 
 ## Instruções do projeto:
