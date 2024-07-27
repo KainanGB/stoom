@@ -1,0 +1,14 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+
+services:
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    volumes:
+      - ./main/resources/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d # copy my entrypoint files to docker entrypoint folder
+    ports:
+      - 5432:5432
